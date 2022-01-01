@@ -1,0 +1,11 @@
+general:
+  timezone: Europe/Warsaw
+influxdb:
+  token: token with read & write permissions
+  bucket: your bucket name
+  org: organization name
+  url: https://your.influxdb.instance
+solaredge:
+  api-key: API key for SolarEdge API access
+  site-id: 1234
+  inverter-sn: 0123456789
