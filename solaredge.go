@@ -2,10 +2,10 @@
 Copyright © 2021 Łukasz Czerpak <lukasz@czerpak.eu>
 
 */
-package main
+package solaredge
 
 import (
-	"solaredge-sync/commands"
+	"solaredge/commands"
 )
 
 func main() {

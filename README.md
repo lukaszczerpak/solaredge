@@ -1,2 +1,2 @@
-# solaredge-sync
+# solaredge
 

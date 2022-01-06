@@ -2,7 +2,7 @@ package solaredgeapi
 
 import (
 	"github.com/go-resty/resty/v2"
-	"solaredge-sync/util"
+	"solaredge/util"
 	"time"
 )
 

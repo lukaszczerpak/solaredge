@@ -1,4 +1,4 @@
-module solaredge-sync
+module solaredge
 
 go 1.17
 

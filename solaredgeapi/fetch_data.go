@@ -1,7 +1,7 @@
 package solaredgeapi
 
 import (
-	"solaredge-sync/solaredgeapi/model"
+	"solaredge/solaredgeapi/model"
 	"time"
 )
 

@@ -1,11 +1,11 @@
 package commands
 
 import (
-	"solaredge-sync/common"
-	log "solaredge-sync/logging"
-	"solaredge-sync/solaredgeapi"
-	"solaredge-sync/solaredgedb"
-	"solaredge-sync/util"
+	"solaredge/common"
+	log "solaredge/logging"
+	"solaredge/solaredgeapi"
+	"solaredge/solaredgedb"
+	"solaredge/util"
 	"time"
 
 	"github.com/spf13/cobra"
@@ -16,6 +16,7 @@ var fetchDataCmd = &cobra.Command{
 	Use:   "fetch-data START_DATE STOP_DATE",
 	Short: "Fetches measurements from SolarEdge API and stores in database.",
 	Long:  `Dates must be provided in a format YYYY-MM-DD, ie.: 2021-08-13`,
+	Args:  cobra.ExactArgs(2),
 	Run: func(cmd *cobra.Command, args []string) {
 		startTime, err := time.ParseInLocation(util.DATE_FORMAT, args[0], config.General.Location)
 		if err != nil {
@@ -75,7 +76,7 @@ func fetchData(cfg *common.AppConfig, startTime, stopTime time.Time) {
 		if cfg.General.DeleteBeforeWrite {
 			log.Infof("Period from %v to %v => deleting old data, if exists",
 				rangeStartTime.Format(util.DATE_FORMAT), rangeStopTime.Format(util.DATE_FORMAT))
-			db.DeleteMeasurements(cfg, rangeStartTime, rangeStopTime)
+			db.DeleteMeasurements(rangeStartTime, rangeStopTime)
 		}
 
 		log.Infof("Period from %v to %v => Writing %d telemetries to database",

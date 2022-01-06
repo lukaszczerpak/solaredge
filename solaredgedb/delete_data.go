@@ -2,7 +2,7 @@ package solaredgedb
 
 import (
 	"context"
-	log "solaredge-sync/logging"
+	log "solaredge/logging"
 	"time"
 )
 

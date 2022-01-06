@@ -2,9 +2,9 @@ package solaredgedb
 
 import (
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
-	"solaredge-sync/common"
-	log "solaredge-sync/logging"
-	"solaredge-sync/solaredgeapi/model"
+	"solaredge/common"
+	log "solaredge/logging"
+	"solaredge/solaredgeapi/model"
 )
 
 func (db *SolarEdgeDB) WriteMeasurements(cfg *common.AppConfig, telemetries []model.InverterTelemetry) {

@@ -1,8 +1,8 @@
 package solaredgedb
 
 import (
-	"solaredge-sync/solaredgeapi"
-	"solaredge-sync/solaredgeapi/model"
+	"solaredge/solaredgeapi"
+	"solaredge/solaredgeapi/model"
 	"time"
 )
 

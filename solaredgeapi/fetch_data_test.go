@@ -6,8 +6,8 @@ import (
 	"github.com/jarcoal/httpmock"
 	"github.com/stretchr/testify/assert"
 	"net/url"
-	"solaredge-sync/solaredgeapi/model"
-	"solaredge-sync/util"
+	"solaredge/solaredgeapi/model"
+	"solaredge/util"
 	"testing"
 	"time"
 )

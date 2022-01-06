@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 	"reflect"
-	"solaredge-sync/common"
+	"solaredge/common"
 	"strings"
 	"time"
 )
@@ -19,7 +19,7 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "solaredge-sync",
+	Use:   "solaredge",
 	Short: "SolarEdge's inverter data fetcher",
 	Long: `This program fetches measurements data from SolarEdge API
 for further use in reporting or visualizations.`,
@@ -36,7 +36,7 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is solaredge-sync.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is solaredge.yaml)")
 }
 
 func initConfig() {
@@ -44,7 +44,7 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 	} else {
 		viper.AddConfigPath(".")
-		viper.SetConfigFile("solaredge-sync.yaml")
+		viper.SetConfigFile("solaredge.yaml")
 	}
 
 	viper.AutomaticEnv()

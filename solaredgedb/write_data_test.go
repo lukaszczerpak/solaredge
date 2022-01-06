@@ -5,9 +5,9 @@ import (
 	"github.com/influxdata/influxdb-client-go/v2/api"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 	"github.com/stretchr/testify/assert"
-	"solaredge-sync/common"
-	"solaredge-sync/solaredgeapi/model"
-	"solaredge-sync/util"
+	"solaredge/common"
+	"solaredge/solaredgeapi/model"
+	"solaredge/util"
 	"testing"
 	"time"
 )
