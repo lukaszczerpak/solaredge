@@ -2,7 +2,7 @@
 Copyright © 2021 Łukasz Czerpak <lukasz@czerpak.eu>
 
 */
-package solaredge
+package main
 
 import (
 	"solaredge/commands"
