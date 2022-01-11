@@ -13,7 +13,7 @@ import (
 
 // fetchDataCmd represents the fetchData command
 var fetchDataCmd = &cobra.Command{
-	Use:   "fetch-data START_DATE STOP_DATE",
+	Use:   "fetch START_DATE STOP_DATE",
 	Short: "Fetches measurements from SolarEdge API and stores in database.",
 	Long:  `Dates must be provided in a format YYYY-MM-DD, ie.: 2021-08-13`,
 	Args:  cobra.ExactArgs(2),
