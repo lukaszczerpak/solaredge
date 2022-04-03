@@ -6,7 +6,7 @@ ADD . /build/
 
 WORKDIR /build
 
-RUN CGO_ENABLED=0 GOOS=linux go build -a -o solaredge .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -o solaredge -buildvcs=false .
 
 
 FROM alpine:latest
